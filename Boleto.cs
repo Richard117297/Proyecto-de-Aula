@@ -21,7 +21,7 @@ internal class Boleto
     private string idEquipaje;
     private int pesoEquipaje;
     private int valorPasaje;
-    private TipoBoleto tipoDeBoleta;
+    private TipoBoletoEnum tipoDeBoleta;
     #endregion
 
 
@@ -45,12 +45,12 @@ internal class Boleto
     public string IdEquipaje { get => idEquipaje; set => idEquipaje = value; }
     public int PesoEquipaje { get => pesoEquipaje; set => pesoEquipaje = value; }
     public int ValorPasaje { get => valorPasaje; set => valorPasaje = value; }
-    public TipoBoleto TipoDeBoleta { get => tipoDeBoleta; set => tipoDeBoleta = value; }
+    public TipoBoletoEnum TipoDeBoleta { get => tipoDeBoleta; set => tipoDeBoleta = value; }
     #endregion
 
 
     #region Constructor
-    public Boleto(string idRegistro, string fechaHoraCompra, string fechaHoraSalida, string fechaHoraLlegada, string idPasajero, string nombrePasajero, string apellidoPasajero, string tipoIdentificación, string numeroTelefono, string lugar, string direccion, string idTren, string nombreContacto, string apellidoContacto, string telefonoContacto, string idVagonCarga, string idEquipaje, int pesoEquipaje, int valorPasaje, TipoBoleto tipoDeBoleta)
+    public Boleto(string nombrePasajero, string apellidoPasajero, string tipoIdentificacion, string numeroTelefono, string lugar, string direccion, string nombreContacto, string apellidoContacto, string telefonoContacto, int pesoEquipaje, TipoBoletoEnum tipoDeBoleta)
     {
 
         IdRegistro = idRegistro;
