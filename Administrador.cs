@@ -1,0 +1,13 @@
+internal class Administrador {
+
+
+
+
+
+
+
+
+
+
+
+}
