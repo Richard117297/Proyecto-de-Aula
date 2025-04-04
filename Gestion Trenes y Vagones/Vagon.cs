@@ -1,0 +1,9 @@
+internal class Vagon {
+
+
+
+
+
+
+
+}
