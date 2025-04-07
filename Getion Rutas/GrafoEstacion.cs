@@ -1,23 +1,16 @@
 internal class GrafoEstacion {
 
-    private NodoDeEstacion estacion;
+    private NodoDeEstacion_Grafo estacion;
     private int cantidadDeEstaciones;
 
-    public NodoDeEstacion Estacion
-    {
-        get => estacion;
-        set => estacion = value;
-    }
+    public NodoDeEstacion_Grafo Estacion { get => estacion; set => estacion = value; }
 
-    public int CantidadDeEstaciones
-    {
-        get => cantidadDeEstaciones;
-        set => cantidadDeEstaciones = value;
-    }
+    public int CantidadDeEstaciones { get => cantidadDeEstaciones; set => cantidadDeEstaciones = value; }
 
-    public GrafoDeEstacion(int cantidadDeEstaciones)
-    {
-        this.cantidadDeEstaciones = cantidadDeEstaciones;
+    public GrafoEstacion(int cantidadDeEstaciones) {
+
+        Estacion = null;
+        CantidadDeEstaciones = cantidadDeEstaciones;
     }
 
     public void CalcularDistanciaDeEstaciones()
@@ -25,7 +18,7 @@ internal class GrafoEstacion {
         // Implementación del calculo de distancia
     }
 
-    public void AddEstacion(NodoDeEstacion estacion)
+    public void AddEstacion(NodoDeEstacion_Grafo estacion)
     {
         this.estacion = estacion;
     }
@@ -35,7 +28,7 @@ internal class GrafoEstacion {
         // Implementacion para mostrar estaciones
     }
 
-    public void AddRuta(NodoDeEstacion estacion)
+    public void AddRuta(NodoDeEstacion_Grafo estacion)
     {
         // Implementacion para agregar una ruta
     }
@@ -60,7 +53,7 @@ internal class GrafoEstacion {
     {
         // Implementacion para solicitar una ruta
         return "Ruta solicitada"; // Retorno de ejemplo
-    }
+    }      
 
     public void CambiarRuta()
     {
