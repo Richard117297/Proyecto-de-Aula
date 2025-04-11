@@ -1,0 +1,6 @@
+internal class Equipaje {
+
+
+
+
+}
