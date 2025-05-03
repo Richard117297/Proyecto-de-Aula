@@ -1,4 +1,4 @@
-internal class Nodo_De_Boleto
+public class Nodo_De_Boleto
 {
 
     private Boleto boleto;

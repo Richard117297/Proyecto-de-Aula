@@ -3,7 +3,7 @@ public enum TipoBoletoEnum
      Premium, Ejecutivo, Estandar
  }
 
- internal class TipoBoleto {
+public class TipoBoleto {
 
      private bool prioridadEmbarque;
      private TipoBoletoEnum tipo; 

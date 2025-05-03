@@ -1,25 +1,26 @@
-internal class NodoDeEstacion_Grafo {
+public class NodoDeEstacion_Grafo {
 
-public class NodoDeEstacion_Grafo
-{
-    private NodoDeEstacion inicio;
-    private NodoDeEstacion fin;
+    private Estacion estacion;
+    private List<Arista> adyacentes;
 
-    public NodoDeEstacion Inicio
+    public Estacion Estacion { get => estacion; set => estacion = value; }
+    public List<Arista> Adyacentes { get => adyacentes; set => adyacentes = value; }
+
+    public NodoDeEstacion_Grafo(Estacion estacion)
     {
-        get => inicio;
-        set => inicio = value;
+        this.estacion = estacion;
+        adyacentes = new List<Arista>();
     }
 
-    public NodoDeEstacion Fin
+    public void AgregarArista(int destino, int distancia)
     {
-        get => fin;
-        set => fin = value;
+        adyacentes.Add(new Arista(destino, distancia));
     }
 
-    public NodoDeEstacion_Grafo() { 
-        inicio = null;
-        fin = null;
+    public override string ToString()
+    {
+        return $"Estación: {Estacion.NombreEstacion[0]}, Conexiones: {Adyacentes.Count}";
     }
-}
+
+
 }
