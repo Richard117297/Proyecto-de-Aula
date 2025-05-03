@@ -1,6 +1,4 @@
-internal class NodoDeRuta
-{
-
+public class NodoDeRuta {
 
     private Ruta ruta;
     private NodoDeRuta siguiente;
@@ -10,13 +8,10 @@ internal class NodoDeRuta
     public NodoDeRuta Siguiente { get => siguiente; set => siguiente = value; }
 
 
-    public NodoDeRuta(Ruta ruta)
-    {
+    public NodoDeRuta( Ruta ruta ) {
 
         Ruta = ruta;
         siguiente = null;
 
     }
-
-
 }

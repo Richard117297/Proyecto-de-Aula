@@ -1,4 +1,4 @@
-internal class Pasajero
+public class Pasajero
 {
     private string nombre;
     private string apellido;
