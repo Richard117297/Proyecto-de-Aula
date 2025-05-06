@@ -1,65 +1,42 @@
 internal class Empleado {
  {
-    private string UsuarioEmpleado;
-    private string ContrasenaEmpleado;
-    private string IdEmpleado;
-    private bool TxEnProgreso;
-    private Empleado UsuarioTx;
-    private string Nombre;
-    private string Apellido;
+        private string usuario_Empleado;
+        private string contraseña_Empleado;
+        private string id_Empleado;
+        private bool txEnProgreso;
+        private Empleado usuarioTx;
 
-    public Empleado(string usuarioEmpleado, string contrasenaEmpleado, string idEmpleado, string nombre, string apellido)
-    {
-        this.UsuarioEmpleado = usuarioEmpleado;
-        this.ContrasenaEmpleado = contrasenaEmpleado;
-        this.IdEmpleado = idEmpleado;
-        this.Nombre = nombre;
-        this.Apellido = apellido;
-        this.TxEnProgreso = false;
-        this.UsuarioTx = null;
-    }
+        public string Usuario_Empleado { get => usuario_Empleado; set => usuario_Empleado = value; }
+        public string Contraseña_Empleado { get => contraseña_Empleado; set => contraseña_Empleado = value; }
+        public string Id_Empleado { get => id_Empleado; set => id_Empleado = value; }
+        public bool TxEnProgreso { get => txEnProgreso; set => txEnProgreso = value; }
+        public Empleado UsuarioTx { get => usuarioTx; set => usuarioTx = value; }
 
-    public string GetUsuarioEmpleado()
-    {
-        return UsuarioEmpleado;
-    }
-
-    public void SetUsuarioEmpleado(string usuarioEmpleado)
-    {
-        this.UsuarioEmpleado = usuarioEmpleado;
-    }
-
-    public string GetContrasenaEmpleado()
-    {
-        return ContrasenaEmpleado;
-    }
-
-    public void SetContrasenaEmpleado(string contrasenaEmpleado)
-    {
-        this.ContrasenaEmpleado = contrasenaEmpleado;
-    }
-
-    public string GetIdEmpleado()
-    {
-        return IdEmpleado;
-    }
-
-    public void SetIdEmpleado(string idEmpleado)
-    {
-        this.IdEmpleado = idEmpleado;
-    }
-
-    public bool IniciarSesion(string usuarioEmpleado, string contrasenaEmpleado)
-    {
-        if (this.UsuarioEmpleado == usuarioEmpleado && this.ContrasenaEmpleado == contrasenaEmpleado)
+        public Empleado(string usuario_Empleado, string contraseña_Empleado, string id_Empleado)
         {
-            this.UsuarioTx = this;
-            this.TxEnProgreso = true;
-            Console.WriteLine($"Bienvenido, {this.Nombre}, {this.Apellido}. Has iniciado sesión correctamente.");
-            return true;
+            this.usuario_Empleado = usuario_Empleado;
+            this.contraseña_Empleado = contraseña_Empleado;
+            this.id_Empleado = id_Empleado;
+            this.txEnProgreso = false;
+            this.usuarioTx = null;
         }
-        return false;
+
+        public bool IniciarSesion(string usuario_Empleado, string contraseña_Empleado)
+        {
+            if (this.usuario_Empleado == usuario_Empleado && this.contraseña_Empleado == contraseña_Empleado)
+            {
+                Console.WriteLine($"Bienvenido Empleado con ID: {this.id_Empleado}. Has iniciado sesión correctamente.");
+                this.txEnProgreso = true;
+                this.usuarioTx = this;
+                return true;
+            }
+            return false;
+        }
+
+
+
+
+
     }
- }
 }
 
