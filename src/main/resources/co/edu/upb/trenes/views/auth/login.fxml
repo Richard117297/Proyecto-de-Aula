@@ -25,7 +25,6 @@
             <Button text="Iniciar sesion" onAction="#iniciarSesion" maxWidth="Infinity" styleClass="primary-button"/>
             <Button text="Recuperar contrasena" onAction="#recuperarContrasena" maxWidth="Infinity" styleClass="secondary-button"/>
             <Button text="Volver" onAction="#volver" maxWidth="Infinity" styleClass="ghost-button"/>
-            <Label text="admin/admin123 | empleado/empleado123 | pasajero/pasajero123" styleClass="hint"/>
         </VBox>
     </center>
 </BorderPane>

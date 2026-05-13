@@ -1,5 +1,4 @@
-![1778711715238](image/SECURITY/1778711715238.png)# Security Policy
-
+![alt text](image/SECURITY/login.png)# Security Policy
 ## Proyecto académico
 
 StaffTrain es un proyecto académico de escritorio construido con JavaFX, Maven y persistencia local en JSON. No debe considerarse listo para producción sin una revisión de seguridad, manejo robusto de credenciales y endurecimiento de persistencia.
