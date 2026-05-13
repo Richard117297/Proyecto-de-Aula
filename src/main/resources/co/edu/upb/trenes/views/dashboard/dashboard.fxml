@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.upb.trenes.controllers.dashboard.DashboardController"
+            prefWidth="1100" prefHeight="680" styleClass="root-pane">
+    <top>
+        <VBox spacing="4" styleClass="header">
+            <padding>
+                <Insets top="20" right="24" bottom="16" left="24"/>
+            </padding>
+            <Label text="Gestion de Trenes de Transporte de Pasajeros" styleClass="title"/>
+            <Label text="Panel principal" styleClass="subtitle"/>
+        </VBox>
+    </top>
+    <center>
+        <GridPane hgap="12" vgap="12" styleClass="module-grid">
+            <padding>
+                <Insets top="24" right="24" bottom="24" left="24"/>
+            </padding>
+            <Button text="Boletos" onAction="#abrirModuloPendiente" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Button text="Trenes" onAction="#abrirModuloPendiente" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Button text="Rutas" onAction="#abrirModuloPendiente" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+            <Button text="Equipaje" onAction="#abrirModuloPendiente" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Button text="Abordaje" onAction="#abrirModuloPendiente" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Button text="Estacion" onAction="#abrirModuloPendiente" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        </GridPane>
+    </center>
+</BorderPane>

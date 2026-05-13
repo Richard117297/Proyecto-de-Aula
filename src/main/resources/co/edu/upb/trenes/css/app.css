@@ -1,0 +1,48 @@
+.root-pane {
+    -fx-background-color: #f5f7fb;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.panel {
+    -fx-background-color: white;
+    -fx-border-color: #d8dee9;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.header {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #d8dee9 transparent;
+}
+
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+.subtitle,
+.hint {
+    -fx-text-fill: #64748b;
+}
+
+.primary-button,
+Button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 10 14;
+}
+
+TextField,
+PasswordField {
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #cbd5e1;
+    -fx-padding: 10;
+}
+
+.module-grid Button {
+    -fx-pref-width: 180;
+    -fx-pref-height: 72;
+}
