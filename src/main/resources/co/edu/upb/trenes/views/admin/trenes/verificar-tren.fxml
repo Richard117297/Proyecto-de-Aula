@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.upb.trenes.controllers.admin.trenes.VerificarTrenController"
+      spacing="18" prefWidth="1280" prefHeight="780" styleClass="root-pane page-container">
+    <padding><Insets top="28" right="34" bottom="28" left="34"/></padding>
+    <Label text="Administrador / Gestion de Trenes / Verificar Tren" styleClass="page-title"/>
+    <HBox spacing="18">
+        <VBox spacing="12" styleClass="form-card" HBox.hgrow="ALWAYS">
+            <Label text="Seleccione el tren" styleClass="section-title"/>
+            <ComboBox fx:id="trenCombo" maxWidth="Infinity"/>
+            <TextField fx:id="kilometrajeField" promptText="Kilometros recorridos desde la ultima revision"/>
+            <Button text="Verificar estado" onAction="#verificar" styleClass="primary-button"/>
+            <Button text="Volver" onAction="#volver" styleClass="secondary-button"/>
+        </VBox>
+        <VBox spacing="10" styleClass="detail-card" prefWidth="420">
+            <Label text="Detalle seleccionado" styleClass="section-title"/>
+            <Label fx:id="detalleLabel" text="Seleccione un tren para visualizar su informacion." wrapText="true"/>
+        </VBox>
+    </HBox>
+</VBox>

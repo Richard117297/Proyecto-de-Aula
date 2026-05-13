@@ -1,4 +1,12 @@
-# Sistema de Gestion de Trenes de Transporte de Pasajeros
+<div align="center">
+
+  <img src="./docs/assets/stafftrain-logo.svg" alt="StaffTrain Logo" width="520" />
+
+  # StaffTrain — Sistema de Gestión de Trenes
+
+  **Aplicación de escritorio para la gestión de trenes de transporte de pasajeros, desarrollada con Java, JavaFX, Maven y persistencia JSON.**
+
+</div>
 
 Proyecto academico migrado desde una base inicial en C# hacia Java 17, JavaFX, FXML, Maven y persistencia en archivos JSON.
 
@@ -75,7 +83,25 @@ Los servicios no leen archivos directamente. Los controladores llaman servicios,
 
 ## Estado actual
 
-Primera fase lista: estructura Maven, JavaFX, FXML base, servicios iniciales, repositorios JSON, modelos principales y estructuras de datos propias.
+Aplicacion base StaffTrain funcional: bienvenida, login por rol, dashboards, compra de boletos, validacion de boletos, equipaje, trenes, rutas por grafo, calculo de vagones, abordaje y documentacion.
+
+## Documentacion
+
+- `docs/STAFFTRAIN_DOCUMENTACION.md`
+- `docs/LOGICA_SISTEMA_STAFFTRAIN.md`
+
+## Documentacion de flujos de trabajo
+
+La carpeta `docs/flujos-trabajo/` contiene la explicacion paso a paso de los procesos principales del sistema:
+
+- Flujo general del sistema.
+- Flujo del pasajero.
+- Flujo del empleado.
+- Flujo del administrador.
+- Flujo de compra de boleto.
+- Flujo de validacion de boleto.
+- Flujo de equipaje.
+- Flujo de rutas y trenes.
 
 ## Proximos pasos
 

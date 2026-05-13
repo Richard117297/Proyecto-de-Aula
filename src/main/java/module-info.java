@@ -5,6 +5,15 @@ module co.edu.upb.trenes {
     requires com.fasterxml.jackson.datatype.jsr310;
 
     opens co.edu.upb.trenes.controllers.auth to javafx.fxml;
+    opens co.edu.upb.trenes.controllers.bienvenida to javafx.fxml;
+    opens co.edu.upb.trenes.controllers.admin to javafx.fxml;
+    opens co.edu.upb.trenes.controllers.admin.trenes to javafx.fxml;
+    opens co.edu.upb.trenes.controllers.admin.boletos to javafx.fxml;
+    opens co.edu.upb.trenes.controllers.admin.rutas to javafx.fxml;
+    opens co.edu.upb.trenes.controllers.admin.informacion to javafx.fxml;
+    opens co.edu.upb.trenes.controllers.admin.estacion to javafx.fxml;
+    opens co.edu.upb.trenes.controllers.pasajero to javafx.fxml;
+    opens co.edu.upb.trenes.controllers.empleado to javafx.fxml;
     opens co.edu.upb.trenes.controllers.dashboard to javafx.fxml;
     opens co.edu.upb.trenes.controllers.boletos to javafx.fxml;
     opens co.edu.upb.trenes.controllers.trenes to javafx.fxml;
@@ -18,6 +27,7 @@ module co.edu.upb.trenes {
     opens co.edu.upb.trenes.models.rutas to com.fasterxml.jackson.databind;
     opens co.edu.upb.trenes.models.equipaje to com.fasterxml.jackson.databind;
     opens co.edu.upb.trenes.models.abordaje to com.fasterxml.jackson.databind;
+    opens co.edu.upb.trenes.models.config to com.fasterxml.jackson.databind;
 
     exports co.edu.upb.trenes.app;
     exports co.edu.upb.trenes.models.usuarios;
@@ -26,4 +36,5 @@ module co.edu.upb.trenes {
     exports co.edu.upb.trenes.models.rutas;
     exports co.edu.upb.trenes.models.equipaje;
     exports co.edu.upb.trenes.models.abordaje;
+    exports co.edu.upb.trenes.models.config;
 }
