@@ -1,4 +1,4 @@
-![1778711682387](image/SECURITY/1778711682387.png)![1778711715238](image/SECURITY/1778711715238.png)# Security Policy
+![1778711715238](image/SECURITY/1778711715238.png)# Security Policy
 
 ## Proyecto académico
 
