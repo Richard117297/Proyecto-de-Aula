@@ -61,4 +61,22 @@ public class JsonFileManager {
             throw new RepositoryException("No se pudo escribir " + path, e);
         }
     }
+
+    public <T> T readObject(Path path, Class<T> type) {
+        ensureObjectFile(path);
+        try {
+            return objectMapper.readValue(path.toFile(), type);
+        } catch (IOException e) {
+            throw new RepositoryException("No se pudo leer " + path, e);
+        }
+    }
+
+    public <T> void writeObject(Path path, T value) {
+        try {
+            Files.createDirectories(path.getParent());
+            objectMapper.writeValue(path.toFile(), value);
+        } catch (IOException e) {
+            throw new RepositoryException("No se pudo escribir " + path, e);
+        }
+    }
 }

@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "id": "ruta-A-H",
+    "origenId": "A",
+    "destinoId": "H",
+    "trenId": "tren-arnold-001",
+    "salida": "2026-05-14T08:00:00",
+    "llegada": "2026-05-14T12:30:00",
+    "iniciada": false
+  }
+]

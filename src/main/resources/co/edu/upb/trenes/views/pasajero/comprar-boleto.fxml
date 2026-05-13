@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.upb.trenes.controllers.pasajero.ComprarBoletoController"
+            styleClass="app-root">
+    <center>
+        <ScrollPane fitToWidth="false" fitToHeight="false" pannable="true"
+                    hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED" styleClass="app-scroll-pane">
+            <content>
+                <StackPane styleClass="scroll-center-wrapper">
+        <VBox spacing="24" minWidth="1120" prefWidth="1240" maxWidth="1320" styleClass="page-content">
+
+            <VBox spacing="6">
+                <Label text="Pasajero / Viajar / Compra de boleto" styleClass="page-title"/>
+                <Label text="Selecciona estaciones, revisa la ruta recomendada, valida el preboleto y confirma el pago." styleClass="page-subtitle"/>
+            </VBox>
+
+            <HBox spacing="24" styleClass="two-column-layout">
+                <VBox spacing="18" styleClass="left-column">
+                    <GridPane hgap="18" vgap="16" styleClass="form-card form-grid">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="50"/>
+                            <ColumnConstraints percentWidth="50"/>
+                        </columnConstraints>
+                        <padding><Insets top="22" right="22" bottom="22" left="22"/></padding>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                            <Label text="Estación de origen" wrapText="true" styleClass="form-label"/>
+                            <ComboBox fx:id="origenCombo" promptText="Origen" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <Label text="Estación de destino" wrapText="true" styleClass="form-label"/>
+                            <ComboBox fx:id="destinoCombo" promptText="Destino" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                            <Label text="Tren disponible" wrapText="true" styleClass="form-label"/>
+                            <ComboBox fx:id="trenCombo" promptText="Tren" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <Label text="Categoría del boleto" wrapText="true" styleClass="form-label"/>
+                            <ComboBox fx:id="categoriaCombo" promptText="Categoría" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                            <Label text="Fecha de salida" wrapText="true" styleClass="form-label"/>
+                            <DatePicker fx:id="fechaSalidaPicker" promptText="Fecha" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <Label text="Hora de salida" wrapText="true" styleClass="form-label"/>
+                            <ComboBox fx:id="horaSalidaCombo" promptText="Hora" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                            <Label text="Forma de pago" wrapText="true" styleClass="form-label"/>
+                            <ComboBox fx:id="pagoCombo" promptText="Pago" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <Label text="Acciones de ruta" wrapText="true" styleClass="form-label"/>
+                            <Button text="Recalcular ruta" onAction="#recomendarRuta" maxWidth="Infinity" styleClass="secondary-button"/>
+                        </VBox>
+                    </GridPane>
+
+                    <GridPane hgap="18" vgap="16" styleClass="form-card form-grid">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="50"/>
+                            <ColumnConstraints percentWidth="50"/>
+                        </columnConstraints>
+                        <padding><Insets top="22" right="22" bottom="22" left="22"/></padding>
+                        <Label text="Datos del pasajero" styleClass="section-title" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                            <Label text="Nombres del pasajero" wrapText="true" styleClass="form-label"/>
+                            <TextField fx:id="nombreField" promptText="Ej. Carlos Andrés" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <Label text="Apellidos del pasajero" wrapText="true" styleClass="form-label"/>
+                            <TextField fx:id="apellidoField" promptText="Ej. Carvajal Barragán" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                            <Label text="Número de documento del pasajero" wrapText="true" styleClass="form-label"/>
+                            <TextField fx:id="documentoField" promptText="Solo números" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <Label text="Teléfono del pasajero" wrapText="true" styleClass="form-label"/>
+                            <TextField fx:id="telefonoField" promptText="Solo números" maxWidth="Infinity"/>
+                        </VBox>
+                        <Label text="Contacto de emergencia" styleClass="section-title" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2"/>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                            <Label text="Nombre del contacto de emergencia" wrapText="true" styleClass="form-label"/>
+                            <TextField fx:id="contactoNombreField" promptText="Ej. Laura" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <Label text="Apellido del contacto de emergencia" wrapText="true" styleClass="form-label"/>
+                            <TextField fx:id="contactoApellidoField" promptText="Ej. Gómez" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                            <Label text="Teléfono del contacto de emergencia" wrapText="true" styleClass="form-label"/>
+                            <TextField fx:id="contactoTelefonoField" promptText="Solo números" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                            <Label text="Parentesco o relación con el pasajero" wrapText="true" styleClass="form-label"/>
+                            <TextField fx:id="contactoRelacionField" promptText="Ej. Madre" maxWidth="Infinity"/>
+                        </VBox>
+                        <Label text="Equipaje" styleClass="section-title" GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.columnSpan="2"/>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="0" GridPane.rowIndex="7">
+                            <Label text="Cantidad de maletas" wrapText="true" styleClass="form-label"/>
+                            <TextField fx:id="cantidadMaletasField" promptText="0, 1 o 2" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                            <Label text="Peso de la maleta 1 en kg" wrapText="true" styleClass="form-label"/>
+                            <TextField fx:id="pesoMaletaUnoField" promptText="Ej. 18.5" maxWidth="Infinity"/>
+                        </VBox>
+                        <VBox spacing="6" styleClass="field-group" GridPane.columnIndex="0" GridPane.rowIndex="8">
+                            <Label text="Peso de la maleta 2 en kg" wrapText="true" styleClass="form-label"/>
+                            <TextField fx:id="pesoMaletaDosField" promptText="Ej. 20" maxWidth="Infinity"/>
+                        </VBox>
+                        <Label text="Puedes registrar máximo 2 maletas. Cada maleta debe pesar máximo 80 kg." styleClass="form-helper" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="9" GridPane.columnSpan="2"/>
+                    </GridPane>
+                </VBox>
+
+                <VBox spacing="18" styleClass="right-column">
+                    <VBox spacing="10" minWidth="390" prefWidth="430" maxWidth="460" styleClass="map-card">
+                        <Label text="Mapa de estaciones" styleClass="section-title"/>
+                        <ImageView fitWidth="380" preserveRatio="true" smooth="true" styleClass="map-image">
+                            <image>
+                                <Image url="@../../images/MapaEstaciones.png"/>
+                            </image>
+                        </ImageView>
+                        <Label text="Selecciona una estación de origen y una de destino para ver la ruta recomendada." wrapText="true" styleClass="form-helper"/>
+                    </VBox>
+                    <VBox fx:id="rutaCard" spacing="8" minWidth="390" prefWidth="430" maxWidth="460" styleClass="route-summary-card">
+                        <Label text="Ruta recomendada" styleClass="section-title"/>
+                        <Label fx:id="rutaLabel" text="Seleccione origen y destino." wrapText="true" styleClass="route-timeline"/>
+                        <Label fx:id="distanciaLabel" text="Distancia total: pendiente" styleClass="detail-text"/>
+                        <Label fx:id="intermediasLabel" text="Estaciones intermedias: pendiente" wrapText="true" styleClass="detail-text"/>
+                    </VBox>
+                    <VBox spacing="8" minWidth="390" prefWidth="430" maxWidth="460" styleClass="detail-card">
+                        <Label text="Detalle del tren" styleClass="section-title"/>
+                        <Label fx:id="trenDetalleLabel" text="Seleccione un tren disponible." wrapText="true" styleClass="detail-text"/>
+                    </VBox>
+                </VBox>
+            </HBox>
+
+            <VBox spacing="10" styleClass="detail-card preboleto-card">
+                <Label text="Resumen del boleto antes de pagar" styleClass="section-title"/>
+                <Label fx:id="preboletoLabel" text="Complete los datos para visualizar el preboleto." wrapText="true" styleClass="detail-text"/>
+                <Label fx:id="errorLabel" styleClass="error-label" wrapText="true"/>
+                <HBox spacing="12" styleClass="action-bar">
+                    <Button text="Confirmar pago y generar boleto" onAction="#comprar" styleClass="primary-button"/>
+                    <Button text="Limpiar formulario" onAction="#limpiarFormulario" styleClass="secondary-button"/>
+                    <Button text="Volver" onAction="#volver" styleClass="secondary-button"/>
+                </HBox>
+            </VBox>
+        </VBox>
+                </StackPane>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

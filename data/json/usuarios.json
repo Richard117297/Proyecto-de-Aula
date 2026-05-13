@@ -1,26 +1,22 @@
-[
-  {
-    "id": "admin-001",
-    "usuario": "admin",
-    "contrasena": "admin123",
-    "rol": "ADMINISTRADOR",
-    "nombre": "Administrador Principal",
-    "activo": true
-  },
-  {
-    "id": "empleado-001",
-    "usuario": "empleado",
-    "contrasena": "empleado123",
-    "rol": "EMPLEADO",
-    "nombre": "Empleado Principal",
-    "activo": true
-  },
-  {
-    "id": "pasajero-001",
-    "usuario": "pasajero",
-    "contrasena": "pasajero123",
-    "rol": "PASAJERO",
-    "nombre": "Pasajero Principal",
-    "activo": true
-  }
-]
+[ {
+  "id" : "admin-001",
+  "usuario" : "admin",
+  "contrasena" : "admin123",
+  "rol" : "ADMINISTRADOR",
+  "nombre" : "Administrador Principal",
+  "activo" : true
+}, {
+  "id" : "empleado-001",
+  "usuario" : "empleado",
+  "contrasena" : "empleado123",
+  "rol" : "EMPLEADO",
+  "nombre" : "Empleado Principal",
+  "activo" : true
+}, {
+  "id" : "pasajero-001",
+  "usuario" : "pasajero",
+  "contrasena" : "pasajero123",
+  "rol" : "PASAJERO",
+  "nombre" : "Pasajero Principal",
+  "activo" : true
+} ]

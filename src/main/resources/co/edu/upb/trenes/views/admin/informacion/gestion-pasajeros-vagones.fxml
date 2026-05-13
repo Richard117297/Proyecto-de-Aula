@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.upb.trenes.controllers.admin.informacion.GestionPasajerosVagonesController"
+      spacing="12" minWidth="1180" prefWidth="1280" styleClass="root-pane page-container">
+    <padding><Insets top="28" right="34" bottom="28" left="34"/></padding>
+    <Label text="Gestion de pasajeros y vagones" styleClass="title"/>
+    <ComboBox fx:id="tipoCombo"/>
+    <TextField fx:id="pasajerosField" promptText="Cantidad pasajeros"/>
+    <TextField fx:id="equipajeField" promptText="Cantidad equipaje"/>
+    <Button text="Calcular vagones" onAction="#calcular"/>
+    <Label fx:id="resultadoLabel" styleClass="lead"/>
+    <Button text="Volver" onAction="#volver" styleClass="secondary-button"/>
+</VBox>

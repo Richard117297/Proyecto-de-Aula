@@ -8,6 +8,8 @@ public class Equipaje {
     private String boletoId;
     private double pesoKg;
     private boolean entregado;
+    private String vagonCargaId;
+    private EstadoEquipaje estado = EstadoEquipaje.REGISTRADO;
 
     public Equipaje() {
     }
@@ -31,4 +33,8 @@ public class Equipaje {
     public void setPesoKg(double pesoKg) { this.pesoKg = pesoKg; }
     public boolean isEntregado() { return entregado; }
     public void setEntregado(boolean entregado) { this.entregado = entregado; }
+    public String getVagonCargaId() { return vagonCargaId; }
+    public void setVagonCargaId(String vagonCargaId) { this.vagonCargaId = vagonCargaId; }
+    public EstadoEquipaje getEstado() { return estado; }
+    public void setEstado(EstadoEquipaje estado) { this.estado = estado; }
 }

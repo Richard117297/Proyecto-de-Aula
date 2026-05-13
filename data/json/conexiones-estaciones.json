@@ -1,0 +1,14 @@
+[
+  { "id": "A-B", "origenId": "A", "destinoId": "B", "distanciaKm": 30 },
+  { "id": "A-D", "origenId": "A", "destinoId": "D", "distanciaKm": 50 },
+  { "id": "A-F", "origenId": "A", "destinoId": "F", "distanciaKm": 50 },
+  { "id": "A-C", "origenId": "A", "destinoId": "C", "distanciaKm": 40 },
+  { "id": "D-E", "origenId": "D", "destinoId": "E", "distanciaKm": 20 },
+  { "id": "F-E", "origenId": "F", "destinoId": "E", "distanciaKm": 65 },
+  { "id": "F-G", "origenId": "F", "destinoId": "G", "distanciaKm": 80 },
+  { "id": "G-H", "origenId": "G", "destinoId": "H", "distanciaKm": 30 },
+  { "id": "C-J", "origenId": "C", "destinoId": "J", "distanciaKm": 120 },
+  { "id": "C-K", "origenId": "C", "destinoId": "K", "distanciaKm": 110 },
+  { "id": "C-I", "origenId": "C", "destinoId": "I", "distanciaKm": 80 },
+  { "id": "I-G", "origenId": "I", "destinoId": "G", "distanciaKm": 145 }
+]

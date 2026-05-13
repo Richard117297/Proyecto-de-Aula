@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.upb.trenes.controllers.bienvenida.BienvenidaController"
+      spacing="22" alignment="CENTER" prefWidth="1280" prefHeight="780" styleClass="welcome-root">
+    <ImageView fitWidth="760" preserveRatio="true" smooth="true">
+        <image>
+            <Image url="@../../images/logoStaffTrain2.jpeg"/>
+        </image>
+    </ImageView>
+    <Label text="Sistema de Gestion de Trenes" styleClass="brand-subtitle"/>
+    <Label text="Viaja seguro, rapido y sin preocupaciones." styleClass="lead"/>
+    <HBox spacing="12" alignment="CENTER">
+        <Button fx:id="loginButton" text="Iniciar sesion" onAction="#iniciarSesion" styleClass="primary-button"/>
+        <Button text="Conocer modulos" onAction="#conocerModulos" styleClass="secondary-button"/>
+    </HBox>
+    <HBox spacing="18" alignment="CENTER">
+        <Label text="Tickets digitales" styleClass="feature-card"/>
+        <Label text="Planeacion de rutas" styleClass="feature-card"/>
+        <Label text="Control de equipaje" styleClass="feature-card"/>
+        <Label text="Gestion administrativa" styleClass="feature-card"/>
+    </HBox>
+    <padding><Insets top="36" right="36" bottom="36" left="36"/></padding>
+</VBox>
