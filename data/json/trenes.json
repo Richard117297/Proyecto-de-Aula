@@ -1,0 +1,24 @@
+[
+  {
+    "id": "tren-arnold-001",
+    "nombre": "Arnold Principal",
+    "tipoTren": "ARNOLD",
+    "activo": true,
+    "estado": "ACTIVO",
+    "kilometraje": 12500.0,
+    "rutaAsignadaId": "ruta-A-H",
+    "vagonesPasajeros": 10,
+    "vagonesCarga": 5
+  },
+  {
+    "id": "tren-mercedes-001",
+    "nombre": "Mercedes-Benz Principal",
+    "tipoTren": "MERCEDES_BENZ",
+    "activo": true,
+    "estado": "ACTIVO",
+    "kilometraje": 8300.0,
+    "rutaAsignadaId": null,
+    "vagonesPasajeros": 8,
+    "vagonesCarga": 4
+  }
+]

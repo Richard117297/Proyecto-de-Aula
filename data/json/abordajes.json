@@ -1,0 +1,6 @@
+[ {
+  "pasajeroId" : "pasajero-001",
+  "nombre" : "David Carvajal",
+  "tipoBoleto" : "PREMIUM",
+  "numeroVagon" : 0
+} ]

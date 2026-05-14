@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.upb.trenes.controllers.admin.trenes.GestionTrenesAdminController"
+      spacing="14" minWidth="1180" prefWidth="1280" styleClass="root-pane page-container">
+    <padding><Insets top="28" right="34" bottom="28" left="34"/></padding>
+    <Label text="Gestion de trenes" styleClass="title"/>
+    <Button text="Agregar tren" onAction="#agregarTren"/>
+    <Button text="Verificar tren" onAction="#verificarTren"/>
+    <Button text="Dar de baja tren" onAction="#darBajaTren"/>
+    <Button text="Almacenamiento / informacion" onAction="#informacionTrenes"/>
+    <Button fx:id="volverButton" text="Volver" onAction="#volver" styleClass="secondary-button"/>
+</VBox>

@@ -1,0 +1,10 @@
+[ {
+  "id" : "solicitud-49d4875f-448b-4208-9086-e013d03c8270",
+  "boletoId" : "",
+  "rutaActualId" : "",
+  "nuevaRutaId" : "",
+  "nuevoDestinoId" : "",
+  "estado" : "PENDIENTE",
+  "motivo" : null,
+  "fechaSolicitud" : "2026-05-13T11:54:41.8252597"
+} ]

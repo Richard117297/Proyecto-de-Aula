@@ -1,0 +1,20 @@
+[
+  {
+    "id": "tarifa-estandar",
+    "categoria": "ESTANDAR",
+    "valorBasePorKm": 320.0,
+    "multiplicador": 1.0
+  },
+  {
+    "id": "tarifa-ejecutivo",
+    "categoria": "EJECUTIVO",
+    "valorBasePorKm": 320.0,
+    "multiplicador": 1.35
+  },
+  {
+    "id": "tarifa-premium",
+    "categoria": "PREMIUM",
+    "valorBasePorKm": 320.0,
+    "multiplicador": 1.75
+  }
+]

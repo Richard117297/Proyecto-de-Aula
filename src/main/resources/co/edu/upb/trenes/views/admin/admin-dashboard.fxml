@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.upb.trenes.controllers.admin.AdminDashboardController"
+            prefWidth="1280" prefHeight="780" styleClass="root-pane">
+    <left>
+        <VBox spacing="12" styleClass="sidebar">
+            <padding><Insets top="24" right="18" bottom="24" left="18"/></padding>
+            <Label text="StaffTrain" styleClass="sidebar-title"/>
+            <Button fx:id="trenesButton" text="Gestion de trenes" onAction="#gestionTrenes"/>
+            <Button text="Tarifas y boletos" onAction="#tarifasBoletos"/>
+            <Button text="Informacion de trenes" onAction="#informacionTrenes"/>
+            <Button text="Gestion de rutas" onAction="#rutas"/>
+            <Button text="Pasajeros y vagones" onAction="#pasajerosVagones"/>
+            <Button text="Orden de abordaje" onAction="#ordenAbordaje"/>
+            <Button text="Cerrar sesion" onAction="#cerrarSesion" styleClass="secondary-button"/>
+        </VBox>
+    </left>
+    <center>
+        <GridPane hgap="16" vgap="18" alignment="TOP_CENTER" styleClass="content-grid">
+            <padding><Insets top="34" right="34" bottom="34" left="34"/></padding>
+            <Label text="Panel Administrador" styleClass="title" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Label text="Gestiona trenes, rutas, tarifas, boletos y abordaje desde modulos conectados a JSON." styleClass="lead" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <ImageView fitWidth="780" preserveRatio="true" smooth="true" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                <image>
+                    <Image url="@../../images/logoStaffTrain2.jpeg"/>
+                </image>
+            </ImageView>
+        </GridPane>
+    </center>
+</BorderPane>

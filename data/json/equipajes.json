@@ -1,0 +1,9 @@
+[ {
+  "id" : "equipaje-a8ad643f-4932-423f-9c89-dc789ca6e251",
+  "pasajeroId" : "pasajero-001",
+  "boletoId" : "boleto-c64efda5-73b6-4bc4-837b-4f2dcf8cbc2c",
+  "pesoKg" : 40.0,
+  "entregado" : false,
+  "vagonCargaId" : null,
+  "estado" : "REGISTRADO"
+} ]

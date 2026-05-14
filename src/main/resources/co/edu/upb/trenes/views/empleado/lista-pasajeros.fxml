@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.upb.trenes.controllers.empleado.ListaPasajerosController"
+      spacing="18" prefWidth="1280" prefHeight="780" styleClass="root-pane page-container">
+    <padding><Insets top="28" right="34" bottom="28" left="34"/></padding>
+    <Label text="Empleado / Lista de Pasajeros" styleClass="page-title"/>
+    <HBox spacing="18" VBox.vgrow="ALWAYS">
+        <TableView fx:id="pasajerosTable" HBox.hgrow="ALWAYS" styleClass="table-card">
+            <columns>
+                <TableColumn fx:id="documentoColumn" text="Número de documento" prefWidth="150"/>
+                <TableColumn fx:id="nombreColumn" text="Nombre" prefWidth="180"/>
+                <TableColumn fx:id="telefonoColumn" text="Teléfono del pasajero" prefWidth="150"/>
+                <TableColumn fx:id="boletoColumn" text="Boleto" prefWidth="230"/>
+                <TableColumn fx:id="categoriaColumn" text="Categoria" prefWidth="120"/>
+                <TableColumn fx:id="estadoColumn" text="Estado" prefWidth="170"/>
+            </columns>
+        </TableView>
+        <VBox spacing="10" styleClass="detail-card" prefWidth="420">
+            <Label text="Detalle seleccionado" styleClass="section-title"/>
+            <Label fx:id="detalleLabel" text="Seleccione un pasajero/boleto para visualizar trazabilidad." wrapText="true"/>
+        </VBox>
+    </HBox>
+    <Button text="Volver" onAction="#volver" styleClass="secondary-button"/>
+</VBox>

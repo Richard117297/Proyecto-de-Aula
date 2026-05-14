@@ -1,0 +1,13 @@
+[
+  { "id": "A", "nombre": "Estacion A", "ciudad": "Zona A" },
+  { "id": "B", "nombre": "Estacion B", "ciudad": "Zona B" },
+  { "id": "C", "nombre": "Estacion C", "ciudad": "Zona C" },
+  { "id": "D", "nombre": "Estacion D", "ciudad": "Zona D" },
+  { "id": "E", "nombre": "Estacion E", "ciudad": "Zona E" },
+  { "id": "F", "nombre": "Estacion F", "ciudad": "Zona F" },
+  { "id": "G", "nombre": "Estacion G", "ciudad": "Zona G" },
+  { "id": "H", "nombre": "Estacion H", "ciudad": "Zona H" },
+  { "id": "I", "nombre": "Estacion I", "ciudad": "Zona I" },
+  { "id": "J", "nombre": "Estacion J", "ciudad": "Zona J" },
+  { "id": "K", "nombre": "Estacion K", "ciudad": "Zona K" }
+]

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.upb.trenes.controllers.admin.boletos.GestionTarifasBoletosController"
+      spacing="18" prefWidth="1280" prefHeight="780" styleClass="root-pane page-container">
+    <padding><Insets top="28" right="34" bottom="28" left="34"/></padding>
+    <Label text="Administrador / Tarifas y Boletos" styleClass="page-title"/>
+    <HBox spacing="18" VBox.vgrow="ALWAYS">
+        <VBox spacing="12" HBox.hgrow="ALWAYS">
+            <HBox spacing="10">
+                <Button text="Ver boletos validados" onAction="#verValidados"/>
+                <Button text="Ver todos" onAction="#refrescar" styleClass="secondary-button"/>
+            </HBox>
+            <TableView fx:id="boletosTable" styleClass="table-card" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="ID boleto" prefWidth="220"/>
+                    <TableColumn fx:id="pasajeroColumn" text="Pasajero" prefWidth="170"/>
+                    <TableColumn fx:id="rutaColumn" text="Ruta" prefWidth="160"/>
+                    <TableColumn fx:id="categoriaColumn" text="Categoria" prefWidth="120"/>
+                    <TableColumn fx:id="valorColumn" text="Valor" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+        <VBox spacing="12" styleClass="detail-card" prefWidth="430">
+            <Label text="Registro administrativo" styleClass="section-title"/>
+            <Label fx:id="detalleLabel" text="Seleccione un boleto validado para registrar informacion final." wrapText="true"/>
+            <Button text="Registrar informacion final" onAction="#registrarBoleto" styleClass="primary-button"/>
+        </VBox>
+    </HBox>
+    <Button text="Volver" onAction="#volver" styleClass="secondary-button"/>
+</VBox>
